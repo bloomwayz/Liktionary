@@ -8,8 +8,6 @@ df = pd.read_csv(targetUrl)
 words = df.values.tolist()
 
 index = randint(1, 3315)
-print(index)
-
 page = requests.get("https://en.wiktionary.org/wiki/" + words[index][0])
 soup = bs(page.text, "html.parser")
 
